@@ -24,8 +24,8 @@ def divide(a, b):
 #Create a while loop that allows user select thier operation or exit the program
 while True:
     try:
-        num1 = int(input("Enter your first number: "))
-        num2 = int(input("Enter your second number: "))
+        num1 = int(input("Enter your first number: "))      # requests the first number from the user
+        num2 = int(input("Enter your second number: "))     # requests the second number from the user
         if num1 == " " or num2 == "":
             print("Invalid input")
     except ValueError:
