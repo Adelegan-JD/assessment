@@ -19,12 +19,17 @@ def divide(a, b):
     if b != 0:
         return a / b
     else:
-        print("Error! Division by Zero not possible.")
+        print("Error: Cannot divide by zero.")
 
 #Create a while loop that allows user select thier operation or exit the program
 while True:
-    num1 = int(input("Enter your first number: "))
-    num2 = int(input("Enter your second number: "))
+    try:
+        num1 = int(input("Enter your first number: "))
+        num2 = int(input("Enter your second number: "))
+        if num1 == " " or num2 == "":
+            print("Invalid input")
+    except ValueError:
+        print("Invalid value. Please use numbers only")
     try:
         choice = input("Choose operation (+, -, *, /) or 'exit' to quit: ")
         if choice == "exit":
@@ -48,7 +53,7 @@ while True:
 
 
 
-# This is question 2 solution
+# This is question 2 solution: code completion
 while True:
     user_input = input("Enter a number (or type 'exit' to quit): ")
     if user_input == "exit":
@@ -65,7 +70,7 @@ while True:
 
 
 
-# This question 3 solution
+# This question 3 solution:error debugging
 
 while True:
     age = input("Enter your age (or type exit to quit): ")
